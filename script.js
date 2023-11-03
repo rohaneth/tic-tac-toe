@@ -21,6 +21,7 @@ Array.from(boxes).forEach(element =>{
 
 
         reset.addEventListener('click' , ()=> {
+          
         boxtext.textContent = ''
     })
     })
@@ -42,19 +43,23 @@ function checkWin(){
         [2, 4, 6],
     ]
 
-    wins.forEach(e =>{
+    wins.forEach( (e) =>{
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "") ){
-            
-            setTimeout(() => {
-                alert('won')
-            }, 1000);
             boxes[e[0]].classList.add('violet')
             boxes[e[1]].classList.add('violet')
             boxes[e[2]].classList.add('violet')
+
+            reset.addEventListener('click' , ()=>{
+                boxes[e[0]].classList.remove('violet')
+                boxes[e[1]].classList.remove('violet')
+                boxes[e[2]].classList.remove('violet')  
+            })
             
-        }
-    })
-    
-    
+            
+            
+
+            console.log(boxes[e[0]])
+    } 
 }
 
+    )}
