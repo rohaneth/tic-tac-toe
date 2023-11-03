@@ -100,6 +100,10 @@ nav ul{
     transition: width 1s ease-in-out;
 }
 
+.violet{
+    background-color: #911d91;
+}
+
 @media screen and (max-width: 950px)
 {
     .gameContainer{
