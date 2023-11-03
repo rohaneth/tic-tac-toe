@@ -48,6 +48,9 @@ function checkWin(){
             setTimeout(() => {
                 alert('won')
             }, 1000);
+            boxes[e[0]].classList.add('violet')
+            boxes[e[1]].classList.add('violet')
+            boxes[e[2]].classList.add('violet')
             
         }
     })
